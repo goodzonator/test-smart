@@ -1,0 +1,321 @@
+.header {
+    font-size: 21px;
+    color: $white;
+    background: $bg-color url('../images/header-bg.png') no-repeat center top;
+    background-size: contain !important;
+
+    &__inner {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        padding-top: 31px;
+        padding-bottom: 39px;
+    }
+
+    &__title {
+        margin-top: 25px;
+        font-size: 46px;
+        line-height: 50px;
+        text-transform: uppercase;
+        letter-spacing: 1.8px;
+
+        span {
+            display: block;
+            font-size: 25px;
+            line-height: 34px;
+        }
+    }
+
+    &__product-img {
+        margin-top: 21px;
+    }
+
+    &-list {
+        margin-top: 2.5rem;
+        letter-spacing: .6px;
+
+        &__item {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+
+            &:not(:last-child) {
+                margin-bottom: 31px;
+            }
+
+            &-img-hypoallergenic .header-list__img {
+                margin-bottom: 7px;
+            }
+        }
+
+        &__title {
+            margin-bottom: 3px;
+            font-size: 25px;
+            text-transform: uppercase;
+        }
+
+        &__img {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            width: 83px;
+            height: 81px;
+        }
+
+        &__text {
+            letter-spacing: .4px;
+        }
+    }
+
+    @media (min-width: $tv) {
+        background: $bg-color url('../images/header-bg-tablet.png') repeat-x left -12px top;
+        background-size: initial !important;
+        &__inner {
+            position: relative;
+            align-items: flex-start;
+            padding-bottom: 30px;
+        }
+        &__logo {
+            position: absolute;
+            left: 0;
+            top: 63px;
+
+            img {
+                width: 200px;
+                height: 200px;
+            }
+        }
+        &__title {
+            align-self: flex-end;
+            margin-top: 55px;
+            margin-right: 13px;
+            text-align: center;
+            font-size: 40px;
+            line-height: 61px;
+            letter-spacing: 0;
+
+            span {
+                font-size: 34px;
+                line-height: 40px;
+                letter-spacing: 2.5px;
+            }
+        }
+        &__product-img {
+            align-self: center;
+            margin-top: 25px;
+        }
+        &-list {
+            display: flex;
+            flex-wrap: wrap;
+            margin-top: 35px;
+
+            &__item {
+                align-items: flex-start;
+
+                &:first-child, &:nth-child(3n) {
+                    width: calc(100% - 45%);
+                }
+
+                &:nth-child(2), &:last-child {
+                    flex-shrink: 0;
+                    width: 45%;
+                }
+
+                &:not(:last-child) {
+                    margin-bottom: 15px;
+                }
+
+                &-img {
+                    display: flex;
+                    flex-direction: row;
+                    align-items: center;
+                }
+
+                &-img-check {
+                    .header-list__img {
+                        width: 85px;
+                        margin-left: 14px;
+                    }
+
+                    .header-list__text {
+                        margin-top: 35px;
+                        margin-left: 16px;
+                    }
+                }
+
+                &-img-hypoallergenic {
+                    padding-top: 6px;
+                    padding-left: 2px;
+
+                    .header-list__img {
+                        width: 81px;
+                        height: 82px;
+                    }
+
+                    .header-list__text {
+                        margin-left: 18px;
+                        margin-top: 14px;
+                    }
+                }
+            }
+
+            &__title {
+                font-size: 34.5px;
+                text-transform: initial;
+                letter-spacing: .3px;
+            }
+
+            &__text {
+                font-size: 25px;
+                line-height: 33px;
+                letter-spacing: .8px;
+            }
+
+            &__img, &__item-img-hypoallergenic .header-list__img {
+                margin-bottom: 0;
+            }
+        }
+    }
+    @media (min-width: $th) {
+        .container {
+            width: 1024px;
+        }
+        &__logo {
+            left: 50px;
+            img {
+                width: 247px;
+                height: 246px;
+            }
+        }
+        &__title {
+            margin-right: 54px;
+            font-size: 56px;
+            line-height: 77px;
+
+            span {
+                font-size: 42px;
+                line-height: 48px;
+                letter-spacing: 3.5px;
+            }
+        }
+        &-list {
+            margin: 35px 50px 0;
+            &__item {
+                &:first-child, &:nth-child(3n) {
+                    width: calc(100% - 340px);
+                }
+
+                &:nth-child(2), &:last-child {
+                    width: 340px;
+                }
+            }
+            &__title {
+                font-size: 38.5px;
+            }
+            &__text {
+                font-size: 29px;
+                line-height: 37px;
+            }
+        }
+    }
+    @media (min-width: 1280px) {
+        &__inner {
+            padding-bottom: 42px;
+        }
+        &__logo {
+            left: 46px;
+            top: 96px;
+
+            img {
+                width: 345px;
+                height: 345px;
+            }
+        }
+        &__title {
+            margin-top: 105px;
+            margin-right: 86px;
+            font-size: 83px;
+            line-height: 1.3;
+            letter-spacing: 2.2px;
+
+            span {
+                font-size: 62.5px;
+                line-height: 1.3;
+                letter-spacing: 6.6px;
+            }
+        }
+        &__product-img {
+            margin-top: 54px;
+            margin-right: 3px;
+        }
+        &-list {
+            width: 1266px;
+            margin: 78px auto 0;
+
+            &__title {
+                margin-bottom: 7px;
+                font-size: 52px;
+                letter-spacing: 4px;
+            }
+
+            &__text {
+                font-size: 37.5px;
+                line-height: 44px;
+                letter-spacing: 2.8px;
+            }
+
+            &__item {
+                &:not(:last-child) {
+                    margin-bottom: 51px;
+                }
+
+                &:first-child,
+                &:nth-child(3) {
+                    width: calc(100% - 531px);
+                }
+
+                &:nth-child(2),
+                &:last-child {
+                    width: 531px;
+                }
+
+                &-img-check {
+                    .header-list__img {
+                        width: 113px;
+                        height: 94px;
+                        margin-left: -9px;
+                    }
+
+                    .header-list__text {
+                        margin-top: 43px;
+                        margin-left: 25px;
+                    }
+                }
+
+                &-img-hypoallergenic {
+                    margin-top: -28px;
+                    padding-left: 5px;
+                    padding-top: 0;
+
+                    .header-list__img {
+                        width: 108px;
+                        height: 106px;
+                    }
+
+                    .header-list__text {
+                        margin-left: 26px;
+                        margin-top: 16px;
+                        letter-spacing: 3px;
+                    }
+                }
+            }
+        }
+    }
+    @media (min-width: 1536px) {
+        background: $bg-color url('../images/header-bg-desktop.png') repeat-x left -18px top;
+        background-size: initial !important;
+        .container {
+            width: 1534px;
+        }
+    }
+}
